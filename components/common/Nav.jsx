@@ -5,7 +5,7 @@ import motto from '../../public/motto.png'
 
 const Nav = () => {
   return (
-    <nav class="flex flex-row p-2 justify-between w-full h-32 bg-white">
+    <nav class="sticky top-0 z-40 flex flex-row p-2 justify-between w-full h-32 bg-white">
       {/* Logo and Motto */}
       <div className="flex flex-row">
         <div>
