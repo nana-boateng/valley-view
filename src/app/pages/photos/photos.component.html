@@ -1,0 +1,9 @@
+<div id="photos" class="flex flex-row justify-around mx-10 my-5">
+  <button [ngClass]="getActive(selectedTab === generalPhotos)" class="photos-button"
+    (click)="getPhotos('General')">General</button>
+  <button [ngClass]="getActive(selectedTab === naturePhotos)" class="photos-button"
+    (click)="getPhotos('Nature')">Nature</button>
+  <button [ngClass]="getActive(selectedTab === valleyPhotos)" class="photos-button"
+    (click)="getPhotos('Valley')">Valley</button>
+</div>
+<app-slides [photosSources]="selectedTab"></app-slides>

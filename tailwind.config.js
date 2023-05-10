@@ -1,145 +1,104 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {
-      fontFamily: {},
-      colors: {
-        brandy: {
-          50: "#fefcfa",
-          100: "#fdf9f5",
-          200: "#f9f1e6",
-          300: "#f5e9d7",
-          400: "#eed8ba",
-          500: "#E6C79C",
-          600: "#cfb38c",
-          700: "#ad9575",
-          800: "#8a775e",
-          900: "#71624c",
-        },
-        mortar: {
-          50: "#f7f6f7",
-          100: "#eeecee",
-          200: "#d5d0d5",
-          300: "#bbb3bb",
-          400: "#897b89",
-          500: "#564256",
-          600: "#4d3b4d",
-          700: "#413241",
-          800: "#342834",
-          900: "#2a202a",
-        },
-        spindle: {
-          50: "#fbfdfe",
-          100: "#f7fbfd",
-          200: "#eaf4fb",
-          300: "#deedf8",
-          400: "#c5e0f2",
-          500: "#ACD2ED",
-          600: "#9bbdd5",
-          700: "#819eb2",
-          800: "#677e8e",
-          900: "#546774",
-        },
-        kobi: {
-          50: "#fefbfd",
-          100: "#fdf7fa",
-          200: "#f9eaf3",
-          300: "#f5ddeb",
-          400: "#eec4dd",
-          500: "#E6AACE",
-          600: "#cf99b9",
-          700: "#ad809b",
-          800: "#8a667c",
-          900: "#715365",
-        },
-        "fruit-salad": {
-          50: "#f6faf6",
-          100: "#eef5ee",
-          200: "#d4e6d3",
-          300: "#b9d7b9",
-          400: "#85b985",
-          500: "#519b50",
-          600: "#498c48",
-          700: "#3d743c",
-          800: "#315d30",
-          900: "#284c27",
-        },
-      },
-      animation: {
-        "fade-in-down": "fade-in-down 0.5s ease-out",
-        "fade-out-down": "fade-out-down 0.5s ease-out",
-        "fade-in-up": "fade-in-up 0.5s ease-out",
-        "fade-out-up": "fade-out-up 0.5s ease-out",
-        "fade-in-left": "fade-in-left 0.5s ease-out",
-        "fade-in-right": "fade-in-right 0.5s ease-out",
-      },
-      keyframes: (theme) => ({
-        "fade-in-down": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(-10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-        "fade-in-left": {
-          "0%": {
-            opacity: "0",
-            transform: "translateX(-10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateX(0)",
-          },
-        },
-        "fade-in-right": {
-          "0%": {
-            opacity: "0",
-            transform: "translateX(10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateX(0)",
-          },
-        },
-        "fade-out-down": {
-          from: {
-            opacity: "1",
-            transform: "translateY(0px)",
-          },
-          to: {
-            opacity: "0",
-            transform: "translateY(10px)",
-          },
-        },
-        "fade-in-up": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-        "fade-out-up": {
-          from: {
-            opacity: "1",
-            transform: "translateY(0px)",
-          },
-          to: {
-            opacity: "0",
-            transform: "translateY(10px)",
-          },
-        },
-      }),
+    extend: {},
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
     },
+    colors: {
+      transparent: 'transparent',
+      black: {
+        '50': '#f2f4f4',
+        '100': '#e6e8e9',
+        '200': '#bfc6c8',
+        '300': '#99a3a7',
+        '400': '#4d5f65',
+        '500': '#001a23',
+        '600': '#001720',
+        '700': '#00141a',
+        '800': '#001015',
+        '900': '#000d11'
+      },
+      white: {
+        '50': '#fefefe',
+        '100': '#fdfefe',
+        '200': '#f9fcfc',
+        '300': '#f6f9fa',
+        '400': '#eff5f6',
+        '500': '#e8f1f2',
+        '600': '#d1d9da',
+        '700': '#aeb5b6',
+        '800': '#8b9191',
+        '900': '#727677'
+      },
+      'watermelon': {
+        '50': '#fff8f8',
+        '100': '#fff0f2',
+        '200': '#ffdadd',
+        '300': '#ffc3c9',
+        '400': '#ff96a1',
+        '500': '#ff6978',
+        '600': '#e65f6c',
+        '700': '#bf4f5a',
+        '800': '#993f48',
+        '900': '#7d333b'
+      },
+      'salad': {
+        '50': '#f6faf6',
+        '100': '#eef5ee',
+        '200': '#d4e6d3',
+        '300': '#b9d7b9',
+        '400': '#85b985',
+        '500': '#519b50',
+        '600': '#498c48',
+        '700': '#3d743c',
+        '800': '#315d30',
+        '900': '#284c27'
+      },
+      'blue': {
+        '50': '#f5fafb',
+        '100': '#ebf4f6',
+        '200': '#cde4e9',
+        '300': '#afd3db',
+        '400': '#74b2c1',
+        '500': '#3891a6',
+        '600': '#328395',
+        '700': '#2a6d7d',
+        '800': '#225764',
+        '900': '#1b4751'
+      },
+      'siren': {
+        '50': '#f9f2f5',
+        '100': '#f3e6ec',
+        '200': '#e2c0cf',
+        '300': '#d09bb1',
+        '400': '#ac4f77',
+        '500': '#89043d',
+        '600': '#7b0437',
+        '700': '#67032e',
+        '800': '#520225',
+        '900': '#43021e'
+      },
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
   },
   plugins: [],
-};
+}

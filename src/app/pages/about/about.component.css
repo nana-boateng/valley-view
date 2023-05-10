@@ -1,0 +1,11 @@
+.image-1 {
+  @apply object-scale-down h-36 md:h-56 mx-auto rounded-md shadow-xl -translate-x-12 translate-y-7 md:-translate-x-32;
+}
+
+.image-2 {
+  @apply object-scale-down z-10 h-36 md:h-56 mx-auto rounded-md shadow-xl translate-x-12 -translate-y-7 md:translate-x-32 md:-translate-y-16;
+}
+
+.download-link {
+  @apply flex flex-col justify-center text-blue-800 text-center md:flex md:flex-row;
+}

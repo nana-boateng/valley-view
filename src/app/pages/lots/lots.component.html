@@ -1,0 +1,15 @@
+<h2 id="lots" class="text-2xl text-center mt-10 mb-5 text-salad-500">Lots</h2>
+<div class="md:flex md:flex-row">
+  <img src="./../../../assets/lots.gif" alt="a map of available lots" class="ml-10">
+  <div class="flex flex-row justify-end">
+    <button type="button" class="md:hidden button" (click)="showLots()">View Lots</button>
+  </div>
+  <div class="flex flex-row justify-end">
+    <ul *ngIf="!hidden" class="list">
+      <li *ngFor="let lot of lots | keyvalue" class="rounded-md border border-current w-16 h-7 m-2 text-sm text-center"
+        [ngClass]="getColour(lot)">
+        {{lot.key}}
+      </li>
+    </ul>
+  </div>
+  <div>

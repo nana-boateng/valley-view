@@ -1,0 +1,22 @@
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.button {
+  @apply rounded-md border w-1/4 py-1.5 bg-salad-400 border border-salad-500 text-xl disabled:bg-black-500;
+}
