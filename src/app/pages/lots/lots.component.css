@@ -2,5 +2,5 @@
   @apply px-4 py-2 mx-3 bg-salad-400 rounded-b-none;
 }
 .list {
-  @apply flex flex-wrap mx-3 justify-center w-full bg-salad-400 -translate-y-1 pt-3 h-80 rounded-md overflow-auto md:h-full;
+  @apply flex flex-wrap mx-3 justify-center w-full bg-salad-400 -translate-y-1 pt-3 h-80 rounded-md overflow-auto md:h-full xl:bg-white-50;
 }
