@@ -5,10 +5,13 @@
 
 @layer base {
   h1 {
-    @apply text-xl md:text-3xl font-semibold font-sans;
+    @apply text-4xl md:text-5xl font-semibold font-sans;
   }
   h2 {
-    @apply text-lg md:text-2xl font-semibold font-sans;
+    @apply text-2xl xl:text-4xl font-semibold font-sans;
+  }
+  h3 {
+    @apply text-xl xl:text-2xl font-semibold font-sans;
   }
   button {
     @apply bg-opacity-80 border text-white-50 font-medium shadow-md rounded-md;

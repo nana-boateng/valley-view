@@ -8,7 +8,7 @@
   </button>
   <a href="#home" class="heading">
     <img src="./../../../../assets/logo.png" alt="Valley View Logo" class="logo">
-    <h1 class="md:text-xl md:w-max md:mt-10 xl:text-2xl">
+    <h1 class="text-xl md:text-xl md:w-max md:mt-10 xl:text-2xl">
       "A Lifestyle Change"
     </h1>
   </a>
@@ -19,11 +19,12 @@
       <a href="http://facebook.com"><img src="./../../../../assets/fb-icon.png" alt="Facebook icon" class="h-9"></a>
     </nav>
     <nav class="md:w-full flex-row md:justify-center">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#lots" class="nav-link">Lots</a>
-      <a href="#photos" class="nav-link">Photos</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <a href="#community" class="nav-link">Community</a>
+      <a href="#about" class="nav-link {{ fragment === 'about' ? 'bg-salad-400 text-white-50' : '' }}">About</a>
+      <a href="#lots" class="nav-link {{ fragment === 'lots' ? 'bg-salad-400 text-white-50' : '' }}">Lots</a>
+      <a href="#photos" class="nav-link {{ fragment === 'photos' ? 'bg-salad-400 text-white-50' : '' }}">Photos</a>
+      <a href="#contact" class="nav-link {{ fragment === 'contact' ? 'bg-salad-400 text-white-50' : '' }}">Contact</a>
+      <a href="#community"
+        class="nav-link {{ fragment === 'community' ? 'bg-salad-400 text-white-50' : '' }}">Community</a>
     </nav>
   </div>
 </header>

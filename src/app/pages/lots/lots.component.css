@@ -1,6 +1,6 @@
 .button {
-  @apply px-4 py-2 mx-3 bg-salad-400 rounded-b-none;
+  @apply px-4 py-2 mx-3 border-none bg-salad-400;
 }
 .list {
-  @apply flex flex-wrap mx-3 justify-center w-full bg-salad-400 -translate-y-1 pt-3 h-80 rounded-md overflow-auto md:h-full xl:bg-white-50;
+  @apply flex flex-wrap mx-3 justify-center w-full bg-salad-400 -translate-y-1 pt-3 h-80 rounded-l-md rounded-b-md overflow-auto md:h-full lg:bg-white-50;
 }

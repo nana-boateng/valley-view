@@ -1,0 +1,19 @@
+.heading {
+  @apply text-salad-500 text-center my-5;
+}
+
+.image-one {
+  @apply md:h-64 lg:h-full;
+}
+
+.para {
+  @apply mx-3 italic text-center font-semibold md:text-lg lg:text-2xl lg:mt-20 xl:text-3xl xl:mt-5;
+}
+
+.a-link {
+  @apply flex flex-col justify-center text-blue-800 text-center md:flex md:flex-row xl:text-2xl xl:mt-10;
+}
+
+.pdf-icon {
+  @apply h-6 mx-auto md:mx-2 xl:my-1.5;
+}

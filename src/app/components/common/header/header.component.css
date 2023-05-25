@@ -8,5 +8,5 @@
   @apply mx-auto my-4 md:h-20 md:mx-0 xl:mx-6;
 }
 .nav-link {
-  @apply mx-2 text-xl font-bold xl:text-2xl;
+  @apply mx-2 px-2 rounded-md text-xl font-bold xl:text-2xl;
 }
