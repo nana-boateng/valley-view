@@ -1,3 +1,17 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Adjust the value as per your requirements */
+  height: 100%;
+  width: 300px; /* Adjust the value as per your requirements */
+  background-color: #f3f3f3; /* Adjust the color as per your requirements */
+  transition: left 0.3s ease;
+  z-index: 20;
+}
+
+.sidebar.show {
+  left: 0;
+}
 .button {
   @apply w-10 h-max mt-5 ml-5 py-1.5 transition-all bg-salad-500 hover:bg-salad-600 active:bg-salad-700 focus:outline-none focus:ring focus:ring-salad-300;
 }
@@ -9,4 +23,7 @@
 }
 .nav-link {
   @apply mx-2 px-2 rounded-md text-xl font-bold xl:text-2xl;
+}
+.nav-link-sidebar {
+  @apply my-3 px-3 py-2 text-2xl
 }

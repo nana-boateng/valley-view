@@ -16,6 +16,7 @@ import { SectionOneComponent } from './components/about/section-one/section-one.
 import { SectionTwoComponent } from './components/about/section-two/section-two.component';
 import { SectionThreeComponent } from './components/about/section-three/section-three.component';
 import { SectionFourComponent } from './components/about/section-four/section-four.component';
+import { SidebarComponent } from './components/common/header/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SectionFourComponent } from './components/about/section-four/section-fo
     SectionTwoComponent,
     SectionThreeComponent,
     SectionFourComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

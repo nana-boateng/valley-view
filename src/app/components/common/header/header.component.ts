@@ -10,6 +10,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   fragment = "";
+  showMenu = false;
 
   constructor(private location: Location, private router: Router) {
   }
@@ -27,5 +28,10 @@ export class HeaderComponent implements OnInit {
     const fragment = url.split('#')[1] || '';
     this.fragment = fragment;
     console.log(this.fragment); // Output: fragment value
+  }
+
+  openMenu() {
+    this.showMenu = !this.showMenu
+    console.log(this.showMenu)
   }
 }
