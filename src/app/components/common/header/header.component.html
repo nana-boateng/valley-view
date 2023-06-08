@@ -1,5 +1,5 @@
 <header class="sticky -top-5 md:-top-2 min-h-64 z-10 flex flex-row bg-white-50 shadow-md md:justify-between">
-  <button class="md:hidden button translate-y-14" *ngIf="!showMenu"> <span class="sr-only">Menu
+  <button class="md:hidden button translate-y-10" *ngIf="!showMenu"> <span class="sr-only">Menu
     </span>
     <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
       stroke="currentColor" class="w-6 h-6 mx-auto" (click)="openMenu()">
@@ -31,7 +31,7 @@
         class="nav-link {{ fragment === 'community' ? 'bg-salad-400 text-white-50' : '' }}">Community</a>
     </nav>
   </div>
-  <div class="sidebar md:hidden shadow-md" [ngClass]="{ 'show': showMenu }">
+  <div class="sidebar md:hidden shadow-md -top-5" [ngClass]="{ 'show': showMenu }">
     <nav class="flex flex-col h-screen bg-white-50">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="w-10 h-10 m-3 self-end cursor-pointer" (click)="openMenu()">
