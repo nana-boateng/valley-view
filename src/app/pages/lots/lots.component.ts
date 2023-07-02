@@ -9,7 +9,7 @@ export class LotsComponent {
   hidden: boolean = false;
   lots =
     {
-      "A1": "Sold",
+      "A1": "Available",
       "A2": "Sold",
       "A3": "Sold",
       "B1": "Sold",
