@@ -52,7 +52,7 @@ export class PhotosComponent {
   }
 
   getActive(check: boolean) {
-    return check ? "bg-salad-400 border border-salad-500" : "bg-white-400 text-black-400"
+    return check ? "bg-salad-800 border border-salad-900" : "bg-white-400 text-black-400"
   }
 
 }

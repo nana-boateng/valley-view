@@ -18,5 +18,5 @@
 }
 
 .button {
-  @apply rounded-md border w-1/4 py-1.5 bg-salad-400 border border-salad-500 text-xl disabled:bg-black-500;
+  @apply rounded-md border w-1/4 py-1.5 bg-salad-800 border border-salad-500 text-xl disabled:bg-black-500;
 }
