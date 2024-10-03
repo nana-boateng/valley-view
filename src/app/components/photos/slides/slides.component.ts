@@ -1,50 +1,39 @@
-import { Component, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import * as Hammer from 'hammerjs';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-slides',
-  templateUrl: './slides.component.html',
-  styleUrls: ['./slides.component.css']
+  template: `
+    <p-galleria
+      [value]="photosSources()"
+      [containerStyle]="{ 'max-width': '100%' }"
+      [numVisible]="5"
+      [showIndicators]="false"
+      [showItemNavigatorsOnHover]="true"
+      [showItemNavigators]="true"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img
+          [src]="item.itemImageSrc"
+          style="width: 100%;"
+          [alt]="item.alt"
+          class="rounded-md rounded-b-none"
+        />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center my-2">
+          <img
+            [src]="item.thumbnailImageSrc"
+            [alt]="item.alt"
+            style="width: 100px; height: 67px;"
+            class="rounded-md"
+          />
+        </div>
+      </ng-template>
+    </p-galleria>
+  `,
+  styleUrls: ['./slides.component.css'],
 })
 export class SlidesComponent {
-  @Input() photosSources: string[] = [];
-  currentIndex = 0;
-
-  @ViewChild('slideContainer') slideContainer!: ElementRef;
-
-  constructor(private renderer: Renderer2) { }
-
-  ngAfterViewInit() {
-    const hammer = new Hammer(this.slideContainer.nativeElement);
-    hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
-
-    hammer.on('swipeleft', () => {
-      this.nextPhoto();
-    });
-
-    hammer.on('swiperight', () => {
-      this.prevPhoto();
-    });
-  }
-
-  nextPhoto() {
-    if (this.currentIndex < this.photosSources.length - 1) {
-      this.currentIndex++;
-      // this.updateSlide();
-    }
-  }
-
-  prevPhoto() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-      // this.updateSlide();
-    }
-  }
-
-  updateSlide() {
-    const slide = this.slideContainer.nativeElement.querySelector('.slide');
-    this.renderer.setStyle(slide, 'background-image', `url('${this.photosSources[this.currentIndex]}')`);
-  }
+  photosSources =
+    input<{ itemImageSrc: string; thumbnailImageSrc: string; alt: string }[]>();
 }
-
-
