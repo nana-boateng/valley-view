@@ -1,56 +1,147 @@
-<header class="sticky -top-5 md:-top-2 min-h-64 z-10 flex flex-row bg-white-50 shadow-md md:justify-between">
-  <button class="md:hidden button translate-y-10" *ngIf="!showMenu"> <span class="sr-only">Menu
-    </span>
-    <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-      stroke="currentColor" class="w-6 h-6 mx-auto" (click)="openMenu()">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+<header
+  class="sticky -top-5 md:-top-2 min-h-48 z-10 flex flex-row bg-white-50 shadow-md md:justify-between"
+>
+  <button class="md:hidden button translate-y-10" *ngIf="!showMenu">
+    <span class="sr-only">Menu </span>
+    <svg
+      id="menu"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6 mx-auto"
+      (click)="openMenu()"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
     </svg>
   </button>
 
   <!-- Add the sidebar -->
 
-
   <a href="#home" class="heading">
-    <img src="./../../../../assets/logo.png" alt="Valley View Logo" class="logo">
+    <img
+      src="./../../../../assets/logo.png"
+      alt="Valley View Logo"
+      class="logo"
+    />
     <h1 class="text-xl md:text-xl md:w-max md:mt-10 xl:text-2xl">
       "A Lifestyle Change"
     </h1>
   </a>
   <div class="hidden md:flex md:flex-col md:justify-around xl:mx-6">
     <nav class="flex flex-row mx-4 justify-end">
-      <a href="mailto:chris@chrisparrot.ca"><img src="./../../../../assets/email-icon.png" alt="Email icon"
-          class="h-9 mx-4"></a>
-      <a href="http://facebook.com"><img src="./../../../../assets/fb-icon.png" alt="Facebook icon" class="h-9"></a>
+      <a href="mailto:chris@chrisparrot.ca"
+        ><img
+          src="./../../../../assets/email-icon.png"
+          alt="Email icon"
+          class="h-9 mx-4"
+      /></a>
+      <a href="http://facebook.com"
+        ><img
+          src="./../../../../assets/fb-icon.png"
+          alt="Facebook icon"
+          class="h-9"
+      /></a>
     </nav>
     <nav class="md:w-full flex-row md:justify-center">
-      <a href="#about" class="nav-link {{ fragment === 'about' ? 'bg-salad-800 text-white-50' : '' }}">About</a>
-      <a href="#lots" class="nav-link {{ fragment === 'lots' ? 'bg-salad-800 text-white-50' : '' }}">Lots</a>
-      <a href="#photos" class="nav-link {{ fragment === 'photos' ? 'bg-salad-800 text-white-50' : '' }}">Photos</a>
-      <a href="#contact" class="nav-link {{ fragment === 'contact' ? 'bg-salad-800 text-white-50' : '' }}">Contact</a>
-      <a href="#community"
-        class="nav-link {{ fragment === 'community' ? 'bg-salad-800 text-white-50' : '' }}">Community</a>
+      <a
+        href="#about"
+        class="nav-link {{
+          fragment === 'about' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >About</a
+      >
+      <a
+        href="#lots"
+        class="nav-link {{
+          fragment === 'lots' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >Lots</a
+      >
+      <a
+        href="#photos"
+        class="nav-link {{
+          fragment === 'photos' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >Photos</a
+      >
+      <a
+        href="#contact"
+        class="nav-link {{
+          fragment === 'contact' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >Contact</a
+      >
+      <a
+        href="#community"
+        class="nav-link {{
+          fragment === 'community' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >Community</a
+      >
     </nav>
   </div>
-  <div class="sidebar md:hidden shadow-md -top-5" [ngClass]="{ 'show': showMenu }">
+  <div
+    class="sidebar md:hidden shadow-md -top-5"
+    [ngClass]="{ show: showMenu }"
+  >
     <nav class="flex flex-col h-screen bg-white-50">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-10 h-10 m-3 self-end cursor-pointer" (click)="openMenu()">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-10 h-10 m-3 self-end cursor-pointer"
+        (click)="openMenu()"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
 
-      <a href="#about"
-        class="nav-link-sidebar my-3 {{ fragment === 'about' ? 'bg-salad-800 text-white-50' : '' }}">About</a>
-      <a href="#lots"
-        class="nav-link-sidebar  my-3 {{ fragment === 'lots' ? 'bg-salad-800 text-white-50' : '' }}">Lots</a>
-      <a href="#photos"
-        class="nav-link-sidebar  my-3 {{ fragment === 'photos' ? 'bg-salad-800 text-white-50' : '' }}">Photos</a>
-      <a href="#contact"
-        class="nav-link-sidebar  my-3 {{ fragment === 'contact' ? 'bg-salad-800 text-white-50' : '' }}">Contact</a>
-      <a href="#community"
-        class="nav-link-sidebar  my-3 {{ fragment === 'community' ? 'bg-salad-800 text-white-50' : '' }}">Community</a>
+      <a
+        href="#about"
+        class="nav-link-sidebar my-3 {{
+          fragment === 'about' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >About</a
+      >
+      <a
+        href="#lots"
+        class="nav-link-sidebar  my-3 {{
+          fragment === 'lots' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >Lots</a
+      >
+      <a
+        href="#photos"
+        class="nav-link-sidebar  my-3 {{
+          fragment === 'photos' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >Photos</a
+      >
+      <a
+        href="#contact"
+        class="nav-link-sidebar  my-3 {{
+          fragment === 'contact' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >Contact</a
+      >
+      <a
+        href="#community"
+        class="nav-link-sidebar  my-3 {{
+          fragment === 'community' ? 'bg-salad-800 text-white-50' : ''
+        }}"
+        >Community</a
+      >
     </nav>
   </div>
-
-
 </header>

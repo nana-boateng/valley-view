@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <app-header></app-header>
     <img
       id="home"
-      src="./../../../assets/home.jpg"
+      src="./../../../assets/home copy.jpg"
       alt="Beautiful valley full of grass, trees and other greenery"
       class="w-full max-w-screen-xl mx-auto"
     />

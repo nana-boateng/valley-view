@@ -11,7 +11,7 @@
 }
 
 .a-link {
-  @apply flex flex-col justify-center text-blue-800 text-center md:flex md:flex-row xl:text-2xl xl:mt-10;
+  @apply max-w-fit flex flex-col justify-center bg-blue-800 text-white-50 rounded-md px-2 py-1 text-center md:flex md:flex-row xl:text-2xl xl:mt-10 mx-auto;
 }
 
 .pdf-icon {

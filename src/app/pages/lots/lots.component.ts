@@ -4,7 +4,10 @@ import { lots } from 'lots';
 @Component({
   selector: 'app-lots',
   template: `
-    <h2 id="lots" class="text-2xl text-center mt-10 mb-5 heading">Lots</h2>
+    <h2 id="lots" class="text-2xl text-center mt-10 mb-5 heading">
+      <span class="bg-[#FFA500] rounded-md px-2 py-1">Orange</span> lots are
+      available
+    </h2>
     <div class="md:flex md:flex-row xl:w-screen xl:justify-between">
       <img
         src="./../../../assets/lots.gif"
@@ -24,6 +27,7 @@ import { lots } from 'lots';
             [ngClass]="getColour(lot)"
           >
             {{ lot[0] }}
+            @if(lot[1] === 'Sold') { Sold }
           </li>
         </ul>
       </div>
@@ -40,7 +44,7 @@ export class LotsComponent {
   }
   getColour(lot: any) {
     return lot[1] === 'Sold'
-      ? 'bg-watermelon-800 line-through text-white-400'
-      : 'bg-blue-400';
+      ? 'bg-[#FF0000] line-through text-white-400'
+      : 'bg-[#FFA500]';
   }
 }

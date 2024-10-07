@@ -36,6 +36,7 @@ import { SidebarComponent } from './components/common/header/sidebar/sidebar.com
     SidebarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, GalleriaModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })
